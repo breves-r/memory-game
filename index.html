@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script charset="utf8">
+  var app = { nrComponentes:0 };
+  app.getComponente = function(nome) {
+    if (!app[nome]) {
+      app[nome] = {};
+      app[app.nrComponentes++] = nome;
+    }
+    return app[nome];
+  };
+</script>
+<div id="tabuleiro">
+
+  <h1>JOGO DA MEMÓRIA</h1>
+  <div class="container">
+
+   <button class="inicio" id="iniciarGame">Iniciar</button>
+
+    <div class="tempo">
+        <p>Tempo: </p>
+        <div id="timer">0</div>
+    </div>  
+    <div class="resultado">
+      <p>Melhor tempo: </p>
+      <div id="result">0</div>
+    </div>    
+
+  </div>  
+ 
+  <div id="board">   
+  </div>
+</div>
+  <script src="script.js" charset="utf8"></script>
+</body>
+</html>
